@@ -11,5 +11,6 @@ student2['Name'] = 'Brian'
 students['1'] = student1
 students['2'] = student2
 
+print(student1['RegNo'])
 print(students)
 print(students.get(1))
