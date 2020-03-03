@@ -66,6 +66,6 @@ print("\n****Account Created****")
 
 print("\n\n{} {}".format(firstName, lastName))
 print("Mobile No: {} ID No: {}".format(mobileNo, idNo))
-print("Customer ID: {} Account Type: {} Acc No: {}" .format(
+print("Customer ID: {} Account Type: {} Acc No: {} Balance: {}" .format(
     customerID, accountType, accNo, accBalance))
-print("Account Balance: ".format(accBalance))
+print("Account Balance: {}".format(accBalance))
