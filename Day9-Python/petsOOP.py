@@ -1,5 +1,3 @@
-
-
 class Pets:
     dogs = []
 
@@ -27,6 +25,10 @@ class GermanShepherd(Dog):
 
 
 class BullDog(Dog):
+    def __init__(self, color, name, age, isVaccinated, noOfPuppies):
+        super().__init__(color, name, age, isVaccinated)
+        self.noOfPuppies = noOfPuppies
+
     def walk(self, walk):
         self.walk = walk
 
@@ -47,20 +49,21 @@ name = "rex"
 age = "4 months"
 isVaccinated = True
 sleep = "It sleeps for 5 hours"
+noOfPuppies = 6
 
-germanShepherd = Dog(color, name, age, isVaccinated)
-print(germanShepherd.color, germanShepherd.name,
-      germanShepherd.age, germanShepherd.isVaccinated)
+# germanShepherd = Dog(color, name, age, isVaccinated)
+# print(germanShepherd.color, germanShepherd.name,
+#       germanShepherd.age, germanShepherd.isVaccinated)
 
-bullDog = Dog(color, name, age, isVaccinated)
+bullDog = BullDog(color, name, age, isVaccinated, noOfPuppies)
 print(bullDog.color, bullDog.name,
-      bullDog.age, bullDog.isVaccinated)
+      bullDog.age, bullDog.isVaccinated, bullDog.noOfPuppies)
 
-jackal = Dog(color, name, age, isVaccinated)
-print(jackal.color, jackal.name,
-      jackal.age, jackal.isVaccinated)
+# jackal = Dog(color, name, age, isVaccinated)
+# print(jackal.color, jackal.name,
+#       jackal.age, jackal.isVaccinated)
 
-myDogsList = [germanShepherd, bullDog, jackal]
+myDogsList = [bullDog]
 myPets = Pets(myDogsList)
 
 for s in myPets.dogs:
